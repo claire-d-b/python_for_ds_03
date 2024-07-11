@@ -2,6 +2,7 @@ from S1E9 import Character
 from abc import ABC, abstractmethod
 
 class Baratheon(Character):
+    """Representing the Baratheon family."""
     def __init__(self, first_name, is_alive=True, family_name='Baratheon', eyes='brown', hairs='dark'):
         self.first_name = first_name
         self.is_alive = True
@@ -21,7 +22,7 @@ class Baratheon(Character):
         super().die()
 
 class Lannister(Character):
-
+    """Representing the Lannister family."""
     def __init__(self, first_name, is_alive=True, family_name='Lannister', eyes='blue', hairs='light'):
         self.first_name = first_name
         self.is_alive = True

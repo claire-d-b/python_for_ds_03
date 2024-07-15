@@ -1,10 +1,9 @@
 class calculator:
 
     def __init__(self, object):
-        """Your docstring for Constructor"""
+        """ Calculator is instantiated """
         self.object = object.copy()
 
-    """to iterate over two iterables, we use zip"""
     def __add__(self, object) -> None:
         for i in range(len(self.object)):
             self.object[i] += object

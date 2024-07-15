@@ -2,7 +2,7 @@ from S1E9 import Character
 
 
 class Baratheon(Character):
-    """Representing the Baratheon family."""
+    """ Representing the Baratheon family. """
     def __init__(self, first_name, is_alive=True, family_name='Baratheon',
                  eyes='brown', hairs='dark'):
         self.first_name = first_name
@@ -12,10 +12,10 @@ class Baratheon(Character):
         self.hairs = 'dark'
 
     def __str__(self):
-        """In Python, f"" denotes an f-string, which stands for
+        """ In Python, f"" denotes an f-string, which stands for
         "formatted string literal." Introduced in Python 3.6,
         f-strings provide a way to embed expressions inside string literals,
-        using curly braces {}."""
+        using curly braces {}. """
         return f"{str(self.family_name)}, {str(self.eyes)}, {str(self.hairs)}"
 
     def __repr__(self):
@@ -23,12 +23,12 @@ class Baratheon(Character):
                  {repr(self.hairs)}"
 
     def die(self):
-        """Your docstring for Method"""
+        """ Parent method is called by Baratheon """
         super().die()
 
 
 class Lannister(Character):
-    """Representing the Lannister family."""
+    """ Representing the Lannister family. """
     def __init__(self, first_name, is_alive=True, family_name='Lannister',
                  eyes='blue', hairs='light'):
         self.first_name = first_name
@@ -45,7 +45,7 @@ class Lannister(Character):
                  {repr(self.hairs)}"
 
     def die(self):
-        """Your docstring for Method"""
+        """ Parent method is called by Lannister """
         super().die()
 
     def decorator(func):

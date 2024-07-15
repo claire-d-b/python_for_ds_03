@@ -2,26 +2,26 @@ from abc import ABC, abstractmethod
 
 
 class Character(ABC):
-    """Your docstring for Class"""
+    """ Parent class """
     @abstractmethod
     def __init__(self, first_name, is_alive=True):
-        """Your docstring for Constructor"""
+        """ Character is instantiated """
         self._first_name = first_name
         self.is_alive = is_alive
 
     @abstractmethod
     def die(self):
-        """Your docstring for Method"""
+        """ Character method is called """
         if self.is_alive:
             self.is_alive = not self.is_alive
 
 
 class Stark(Character):
-    """Your docstring for Class"""
+    """ Child class : Stark """
     def __init__(self, first_name, is_alive=True):
-        """Your docstring for Constructor"""
+        """ Stark is instantiated: Stark """
         super().__init__(first_name, is_alive)
 
     def die(self):
-        """Your docstring for Method"""
+        """ Child method calls the parent's one : Stark """
         super().die()

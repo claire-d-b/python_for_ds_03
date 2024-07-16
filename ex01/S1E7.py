@@ -16,11 +16,11 @@ class Baratheon(Character):
         "formatted string literal." Introduced in Python 3.6,
         f-strings provide a way to embed expressions inside string literals,
         using curly braces {}. """
-        return f"{str(self.family_name)}, {str(self.eyes)}, {str(self.hairs)}"
+        return f"of Vector: ({str(self.family_name)}, {str(self.eyes)}, {str(self.hairs)})"
 
     def __repr__(self):
-        return f"{repr(self.family_name)}, {repr(self.eyes)}, \
-                 {repr(self.hairs)}"
+        return f"of Vector: ({repr(self.family_name)}, {repr(self.eyes)}, \
+{repr(self.hairs)})"
 
     def die(self):
         """ Parent method is called by Baratheon """
@@ -38,11 +38,11 @@ class Lannister(Character):
         self.hairs = 'light'
 
     def __str__(self):
-        return f"{str(self.family_name)}, {str(self.eyes)}, {str(self.hairs)}"
+        return f"of vector: ({str(self.family_name)}, {str(self.eyes)}, {str(self.hairs)})"
 
     def __repr__(self):
-        return f"{repr(self.family_name)}, {repr(self.eyes)}, \
-                 {repr(self.hairs)}"
+        return f"of Vector: ({repr(self.family_name)}, {repr(self.eyes)}, \
+{repr(self.hairs)})"
 
     def die(self):
         """ Parent method is called by Lannister """

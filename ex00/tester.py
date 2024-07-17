@@ -1,5 +1,6 @@
 from S1E9 import Character, Stark
 
+
 def main():
     Ned = Stark("Ned")
     print(Ned.__dict__)
@@ -15,8 +16,9 @@ def main():
 
     try:
         hodor = Character("hodor")
+        print(hodor)
     except TypeError as e:
-        print(e)
+        print(f"TypeError: {e}")
 
 
 if __name__ == "__main__":

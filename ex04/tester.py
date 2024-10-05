@@ -7,6 +7,9 @@ def main():
     calculator.dotproduct(a, b)
     calculator.add_vec(a, b)
     calculator.sous_vec(a, b)
+    i = [1, 1, 1]
+    j = [1, 0.5, 4]
+    calculator.true_div(i, j)
 
 
 if __name__ == "__main__":

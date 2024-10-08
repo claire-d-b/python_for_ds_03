@@ -33,6 +33,7 @@ def d_sous_vec(func):
 
 def d_true_div(func):
     object != 0
+
     def wrapper(V1, V2):
         iter(V1)
         iter(V2)

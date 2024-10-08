@@ -27,4 +27,3 @@ class calculator:
         for i in range(len(self.object)):
             self.object[i] /= object
         print(self.object)
-

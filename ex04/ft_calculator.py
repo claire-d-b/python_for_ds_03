@@ -1,36 +1,36 @@
-def dotproduct(func):
+def d_dotproduct(func):
     def wrapper(V1, V2):
         res = 0
         for a, b in zip(V1, V2):
-            res += a * b
+            res += func(a, b)
         print(f"Dot product is: {res}")
     return wrapper
 
 
-def add_vec(func):
+def d_add_vec(func):
     def wrapper(V1, V2):
         res = []
         for a, b in zip(V1, V2):
-            res.append(float(a + b))
+            res.append(float(func(a, b)))
         print(f"Add Vector is: {res}")
     return wrapper
 
 
-def sous_vec(func):
+def d_sous_vec(func):
     def wrapper(V1, V2):
         res = []
         for a, b in zip(V1, V2):
-            res.append(float(a - b))
+            res.append(float(func(a, b)))
         print(f"Sous Vector is: {res}")
     return wrapper
 
-def true_div(func):
+def d_true_div(func):
     try:
         object != 0
         def wrapper(V1, V2):
             res = []
             for a, b in zip(V1, V2):
-                res.append(float(a / b))
+                res.append(float(func(a, b)))
             print(f"True Div Vector is: {res}")
     except Exception as e:
         print(f"AssertionError: {e}")
@@ -39,19 +39,23 @@ def true_div(func):
 
 class calculator:
 
-    @dotproduct
+    @d_dotproduct
     def dotproduct(V1: list[float], V2: list[float]) -> None:
         """Multiplication"""
+        return V1 * V2
 
-    @add_vec
+    @d_add_vec
     def add_vec(V1: list[float], V2: list[float]) -> None:
         """Addition"""
+        return V1 + V2
 
-    @sous_vec
+    @d_sous_vec
     def sous_vec(V1: list[float], V2: list[float]) -> None:
         """Substraction"""
+        return V1 - V2
 
-    @true_div
+    @d_true_div
     def true_div(V1: list[float], V2: list[float]) -> None:
         """Division"""
+        return V1 / V2
 

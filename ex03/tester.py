@@ -12,7 +12,7 @@ def main():
         v3 = calculator([10.0, 15.0, 20.0])
         v3 - 5
         v3 / 5
-        # v3 / 0
+        v3 / 0
         print(calculator(["test_one", 2]).__init__.__doc__)
         v4 = calculator(["test_one", 2])
         v4 * 0.5

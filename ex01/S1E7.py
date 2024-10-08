@@ -1,6 +1,21 @@
 from S1E9 import Character
 
 
+# A Class Decorator is declared just before a class declaration
+def decorator(func):
+        def wrapper(self, firstname, is_alive=True):
+            result = func(self, firstname, is_alive)
+            return result
+        return wrapper
+
+# A Python object has several special methods that provide
+# specific behavior. There are two similar special methods
+# that describe the object using a string representation.
+# These methods are .__repr__() and .__str__().
+# The .__repr__() method returns a detailed description
+# for a programmer who needs to maintain and debug the code.
+# The .__str__() method returns a simpler description with
+# information for the user of the program.
 class Baratheon(Character):
     """Representing the Baratheon family."""
     def __init__(self, first_name, is_alive=True, family_name='Baratheon',
@@ -30,6 +45,11 @@ class Baratheon(Character):
         """Parent method is called (Baratheon)"""
         super().die()
 
+    @decorator
+    def create_Baratheon(self, first_name, is_alive=True):
+        """Baratheon created"""
+        return Baratheon(self, first_name)
+
 
 class Lannister(Character):
     """Representing the Lannister family."""
@@ -56,13 +76,7 @@ class Lannister(Character):
         """Parent method is called (Lannister)"""
         super().die()
 
-    def decorator(func):
-        def wrapper(self, firstname, is_alive=True):
-            result = func(self, firstname, is_alive)
-            return result
-        return wrapper
 
-    """Decorator mentioned"""
     @decorator
     def create_lannister(self, first_name, is_alive=True):
         """Lannister created"""

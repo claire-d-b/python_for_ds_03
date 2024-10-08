@@ -15,8 +15,14 @@ def main():
         Lyanna = Stark("Lyanna", False)
         print(Lyanna.__dict__)
 
+        hodor = Stark(0)
+        print(hodor.is_alive)
+        twin = Stark(hodor)
+        print(hodor.is_alive)
+        
         hodor = Character("hodor")
-        print(hodor)
+
+
     except Exception as e:
         raise AssertionError(f"Error: {e}")
             

@@ -3,10 +3,11 @@ from S1E9 import Character
 
 # A Class Decorator is declared just before a class declaration
 def decorator(func):
-        def wrapper(self, firstname, is_alive=True):
-            result = func(self, firstname, is_alive)
-            return result
-        return wrapper
+    def wrapper(self, firstname, is_alive=True):
+        result = func(self, firstname, is_alive)
+        return result
+    return wrapper
+
 
 # A Python object has several special methods that provide
 # specific behavior. There are two similar special methods
@@ -75,7 +76,6 @@ class Lannister(Character):
     def die(self):
         """Parent method is called (Lannister)"""
         super().die()
-
 
     @decorator
     def create_lannister(self, first_name, is_alive=True):

@@ -24,9 +24,11 @@ def d_sous_vec(func):
         print(f"Sous Vector is: {res}")
     return wrapper
 
+
 def d_true_div(func):
     try:
         object != 0
+
         def wrapper(V1, V2):
             res = []
             for a, b in zip(V1, V2):
@@ -58,4 +60,3 @@ class calculator:
     def true_div(V1: list[float], V2: list[float]) -> None:
         """Division"""
         return V1 / V2
-

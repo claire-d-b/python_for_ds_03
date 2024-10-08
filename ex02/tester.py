@@ -15,7 +15,7 @@ def main():
 
     except Exception as e:
         raise AssertionError(f"Error: {e}")
-            
+
 
 if __name__ == "__main__":
     try:

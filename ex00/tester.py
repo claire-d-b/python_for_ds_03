@@ -18,14 +18,14 @@ def main():
         hodor = Stark(0)
         print(hodor.is_alive)
         twin = Stark(hodor)
+        print(twin)
         print(hodor.is_alive)
-        
-        hodor = Character("hodor")
 
+        hodor = Character("hodor")
 
     except Exception as e:
         raise AssertionError(f"Error: {e}")
-            
+
 
 if __name__ == "__main__":
     try:

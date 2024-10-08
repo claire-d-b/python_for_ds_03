@@ -23,10 +23,8 @@ class calculator:
 
     def __truediv__(self, object) -> None:
         """Division"""
-        try:
-            object != 0
-            for i in range(len(self.object)):
-                self.object[i] /= object
-            print(self.object)
-        except Exception as e:
-            print(f"AssertionError: {e}")
+        object != 0
+        for i in range(len(self.object)):
+            self.object[i] /= object
+        print(self.object)
+

@@ -1,5 +1,7 @@
 def d_dotproduct(func):
     def wrapper(V1, V2):
+        iter(V1)
+        iter(V2)
         res = 0
         for a, b in zip(V1, V2):
             res += func(a, b)
@@ -9,6 +11,8 @@ def d_dotproduct(func):
 
 def d_add_vec(func):
     def wrapper(V1, V2):
+        iter(V1)
+        iter(V2)
         res = []
         for a, b in zip(V1, V2):
             res.append(float(func(a, b)))
@@ -18,6 +22,8 @@ def d_add_vec(func):
 
 def d_sous_vec(func):
     def wrapper(V1, V2):
+        iter(V1)
+        iter(V2)
         res = []
         for a, b in zip(V1, V2):
             res.append(float(func(a, b)))
@@ -26,16 +32,14 @@ def d_sous_vec(func):
 
 
 def d_true_div(func):
-    try:
-        object != 0
-
-        def wrapper(V1, V2):
-            res = []
-            for a, b in zip(V1, V2):
-                res.append(float(func(a, b)))
-            print(f"True Div Vector is: {res}")
-    except Exception as e:
-        print(f"AssertionError: {e}")
+    object != 0
+    def wrapper(V1, V2):
+        iter(V1)
+        iter(V2)
+        res = []
+        for a, b in zip(V1, V2):
+            res.append(float(func(a, b)))
+        print(f"True Div Vector is: {res}")
     return wrapper
 
 
